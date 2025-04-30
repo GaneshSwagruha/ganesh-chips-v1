@@ -1,72 +1,65 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import CategorySection from '../components/CategorySection';
-import chipsImage from '../pics/chips.JPG';
+import chipsImage from '../pics/chips.jpg';
 import karaImage from '../pics/kara.jpg';
-import boondiImage from '../pics/boondi.jpg'
-import masalaPalliImage from '../pics/masalaPalli.JPG'
-import atkulaChudwaImage from '../pics/atkulaChudwa.JPG'
-import greenPeasImage from '../pics/greenPeas.JPG'
-import plainSevImage from '../pics/plainSev.JPG'
-import ringsImage from '../pics/rings.JPG'
-import chanaDalImage from '../pics/chanaDal.jpg'
-import thinGatiImage from '../pics/thinGati.jpg'
-import makkaChudwaImage from '../pics/makkaChudwa.JPG'
+import boondiImage from '../pics/boondi.jpg';
+import masalaPalliImage from '../pics/masalapalli.jpg';
+import atkulaChudwaImage from '../pics/atkulachudwa.jpg';
+import greenPeasImage from '../pics/greenpeas.jpg';
+import plainSevImage from '../pics/plainSev.jpg';
+import ringsImage from '../pics/rings.jpg';
+import chanaDalImage from '../pics/chanadal.jpg';
+import thinGatiImage from '../pics/thingati.jpg';
+import makkaChudwaImage from '../pics/makkachudwa.jpg';
 
+import sakinaluImage from '../pics/sakinalu.jpg';
+import chegodiImage from '../pics/chegodi.jpg';
+import appaluImage from '../pics/appalu.jpg';
+import karamGavvaluImage from '../pics/karamgavvalu.jpg';
+import murukuImage from '../pics/muruku.jpg';
+import poduguMurukuImage from '../pics/podugumuruku.jpg';
+import sannamPusaImage from '../pics/sannampusa.jpg';
+import roundMurukuImage from '../pics/roundmuruku.jpg';
+import smallAppaluImage from '../pics/smallappalu.jpg';
+import smallSakinaluImage from '../pics/smallsakinalu.jpg';
+import namakPariImage from '../pics/namakpari.jpg';
+import mirchiAppaluImage from '../pics/mirchiappalu.jpg';
+import nuvvuluSugarImage from '../pics/nuvvulusugar.jpg';
+import maduguluImage from '../pics/madugulu.jpg';
+import dodduPusaImage from '../pics/doddupusa.jpg';
+import karamSakinaluImage from '../pics/karamsakinalu.jpg';
 
-import sakinaluImage from '../pics/sakinalu.jpg'
-import chegodiImage from '../pics/chegodi.jpg'
-import appaluImage from '../pics/appalu.jpg'
-import karamGavvaluImage from '../pics/karamGavvalu.JPG'
-import murukuImage from '../pics/muruku.jpg'
-import poduguMurukuImage from '../pics/poduguMuruku.jpg'
-import sannamPusaImage from '../pics/sannamPusa.JPG'
-import roundMurukuImage from '../pics/roundMuruku.JPG'
-import smallAppaluImage from '../pics/smallAppalu.JPG'
-import smallSakinaluImage from '../pics/smallSakinalu.jpg'
-import namakPariImage from '../pics/namakPari.JPG'
-import mirchiAppaluImage from '../pics/mirchiAppalu.JPG'
-import nuvvuluSugarImage from '../pics/nuvvuluSugar.JPG'
-import maduguluImage from '../pics/madugulu.JPG'
-import dodduPusaImage from '../pics/dodduPusa.JPG'
-import karamSakinaluImage from '../pics/karamSakinalu.JPG'
+import boondiLadduImage from '../pics/boondiladdu.jpg';
+import bakshaluImage from '../pics/bakshalu.jpg';
+import sunundaImage from '../pics/sununda.jpg';
+import garijaluRavaImage from '../pics/garijalurava.jpg';
 
+import garijaluCocunutImage from '../pics/garijalucocunut.jpg';
+import murmuraLadduImage from '../pics/murmuraladdu.jpg';
+import specialKaraImage from '../pics/specialkara.jpg';
 
+import nuvvuluBellamImage from '../pics/nuvvulubellam.jpg';
+import ladduImage from '../pics/laddu.jpg';
+import arsheluImage from '../pics/arshelu.jpg';
+import bellamGavvaluImage from '../pics/bellamgavvalu.jpg';
+import arisheluSesameImage from '../pics/arishelusesame.jpg';
+import arisheluImage from '../pics/arishelu.jpg';
+import sugarGavvaluImage from '../pics/sugargavvalu.jpg';
+import tillLadduImage from '../pics/tillladdu.jpg';
+import ravvaLadduImage from '../pics/ravvaladdu.jpg';
+import palliBellamImage from '../pics/pallibellam.jpg';
+import bellamCoconutImage from '../pics/bellamcoconut.jpg';
+import palliLadduImage from '../pics/palliladdu.jpg';
+import palliTillMixImage from '../pics/pallitillmix.jpg';
+import allamMurabbaImage from '../pics/allammurabba.jpg';
+import dryFruitLadduImage from '../pics/dryfruitladdu.jpg';
+import peniGheeImage from '../pics/penighee.jpg';
 
-import boondiLadduImage from '../pics/boondiLaddu.jpg'
-import bakshaluImage from '../pics/bakshalu.jpg'
-import sunundaImage from '../pics/sununda.jpg'
-import garijaluRavaImage from '../pics/garijaluRava.jpg'
+import carrotPapadImage from '../pics/carrotpapad.jpg';
+import tomatoPapadImage from '../pics/tomatopapad.jpg';
+import sabudanaPapadImage from '../pics/sabudanapapad.jpg';
 
-import garijaluCocunutImage from '../pics/garijaluCocunut.jpg'
-import murmuraLadduImage from '../pics/murmuraLaddu.JPG'
-import specialKaraImage from '../pics/specialKara.jpg'
-
-
-import nuvvuluBellamImage from '../pics/nuvvuluBellam.jpg'
-import ladduImage from '../pics/laddu.jpg'
-import arsheluImage from '../pics/arshelu.jpg'
-import bellamGavvaluImage from '../pics/bellamGavvalu.JPG'
-import arisheluSesameImage from '../pics/arisheluSesame.JPG'
-import arisheluImage from '../pics/arishelu.jpg'
-import sugarGavvaluImage from '../pics/sugarGavvalu.JPG'
-import tillLadduImage from '../pics/tillLaddu.JPG'
-import ravvaLadduImage  from '../pics/ravvaLaddu.JPG'
-import palliBellamImage from '../pics/palliBellam.JPG'
-import bellamCoconutImage from '../pics/bellamCoconut.jpg'
-import palliLadduImage  from '../pics/palliLaddu.JPG'
-import palliTillMixImage from '../pics/palliTillMix.JPG'
-import allamMurabbaImage from '../pics/allamMurabba.JPG'
-import dryFruitLadduImage from '../pics/dryFruitLaddu.JPG'
-import peniGheeImage from '../pics/peniGhee.JPG'
-
-
-
-
-
-import carrotPapadImage from '../pics/carrotPapad.JPG'
-import tomatoPapadImage from '../pics/tomatoPapad.jpg'
-import sabudanaPapadImage from '../pics/sabudanaPapad.JPG'
 
 // Snacks data
 const snacks = [
