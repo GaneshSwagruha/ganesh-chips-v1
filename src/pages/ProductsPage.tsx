@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import CategorySection from '../components/CategorySection';
 import chipsImage from '../pics/chips.JPG';
-import karaImage from '../pics/kara.JPG';
+import karaImage from '../pics/kara.jpg';
 import boondiImage from '../pics/boondi.jpg'
 import masalaPalliImage from '../pics/masalaPalli.JPG'
 import atkulaChudwaImage from '../pics/atkulaChudwa.JPG'
@@ -23,7 +23,7 @@ import poduguMurukuImage from '../pics/poduguMuruku.jpg'
 import sannamPusaImage from '../pics/sannamPusa.JPG'
 import roundMurukuImage from '../pics/roundMuruku.JPG'
 import smallAppaluImage from '../pics/smallAppalu.JPG'
-import smallSakinaluImage from '../pics/smallSakinalu.JPG'
+import smallSakinaluImage from '../pics/smallSakinalu.jpg'
 import namakPariImage from '../pics/namakPari.JPG'
 import mirchiAppaluImage from '../pics/mirchiAppalu.JPG'
 import nuvvuluSugarImage from '../pics/nuvvuluSugar.JPG'
