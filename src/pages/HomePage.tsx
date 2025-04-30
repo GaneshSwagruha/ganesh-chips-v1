@@ -3,12 +3,12 @@ import Hero from '../components/Hero';
 import FeaturesSection from '../components/FeaturesSection';
 import CategorySection from '../components/CategorySection';
 import ContactBanner from '../components/ContactBanner';
-import chipsImage from '../pics/chips.jpg';  // Adjust the path according to the file structure
-import karaImage from '../pics/kara.jpg';
-import sunundaImage from '../pics/sununda.jpg'
-import bakshaluImage from '../pics/bakshalu.jpg'
-import boondiLadduImage from '../pics/boondiLaddu.jpg'
-import ringsImage from '../pics/rings.jpg'
+import chipsImage from '../../public/pics/chips.jpg';  // Adjust the path according to the file structure
+import karaImage from '../../public/pics/kara.jpg';
+import sunundaImage from '../../public/pics/sununda.jpg'
+import bakshaluImage from '../../public/pics/bakshalu.jpg'
+import boondiLadduImage from '../../public/pics/boondiLaddu.jpg'
+import ringsImage from '../../public/pics/rings.jpg'
 
 const snackPreview = [
   {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, Utensils } from "lucide-react";
 import { motion } from "framer-motion";
-import mainLogo from "../pics/logo.png";
+import mainLogo from "../../public/pics/logo.png";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

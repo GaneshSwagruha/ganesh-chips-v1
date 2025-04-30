@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import chipsImage from "../pics/chips.jpg";
+import chipsImage from "../../public/pics/chips.jpg";
 
 const Hero: React.FC = () => {
   return (
