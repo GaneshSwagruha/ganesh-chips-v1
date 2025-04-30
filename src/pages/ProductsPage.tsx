@@ -320,19 +320,19 @@ const papads = [
     name: "Carrot Papad",
     description: "Crackle with carrot love",
     price: "150 / 200grms",
-    image: carrotPapadImage,
+    image: "/pics/carrotPapad.jpg",
   },
   {
     name: "Tomato Papad",
     description: "Bold flavor with crispy finish",
     price: "₹150 / 200grms",
-    image: tomatoPapadImage,
+    image: "/pics/tomatoPapad.jpg",
   },
   {
     name: "Sabudana Papad",
     description: "Crispy, melt-in-mouth",
     price: "₹150 / 200grms",
-    image: sabudanaPapadImage,
+    image: "/pics/sabudanaPapad.jpg",
   },
 ];
 
