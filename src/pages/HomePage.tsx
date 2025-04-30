@@ -3,31 +3,25 @@ import Hero from "../components/Hero";
 import FeaturesSection from "../components/FeaturesSection";
 import CategorySection from "../components/CategorySection";
 import ContactBanner from "../components/ContactBanner";
-import chipsImage from "../../public/pics/chips.jpg"; 
-import karaImage from "../../public/pics/kara.jpg";
-import sunundaImage from "../../public/pics/sununda.jpg";
-import bakshaluImage from "../../public/pics/bakshalu.jpg";
-import boondiLadduImage from "../../public/pics/boondiLaddu.jpg";
-import ringsImage from "../../public/pics/rings.jpg";
 
 const snackPreview = [
   {
     name: "Chips",
     description: "Thin, crispy potato slices",
     price: "₹440 per kg",
-    image: chipsImage,
+    image: "/pics/chips.jpg",
   },
   {
     name: "Kara",
     description: "Crunchy, spicy snack mix",
     price: "₹360 per kg",
-    image: karaImage,
+    image: "/pics/kara.jpg",
   },
   {
     name: "rings",
     description: "Light, airy, and crisp",
     price: "₹360 per kg",
-    image: ringsImage,
+    image: "/pics/rings.jpg",
   },
 ];
 
@@ -36,19 +30,19 @@ const sweetsPreview = [
     name: "Boondi Laddu",
     description: "Extra large, extra tasty",
     price: "₹400 per kg",
-    image: boondiLadduImage,
+    image: "/pics/boondi.jpg",
   },
   {
     name: "Bakshalu",
     description: "Jaggery and dal magic",
     price: "₹350 per kg",
-    image: bakshaluImage,
+    image: "/pics/bakshalu.jpg",
   },
   {
     name: "Sununda (pure ghee)",
     description: "Minumulu & ghee Goodness",
     price: "600 per kg",
-    image: sunundaImage,
+    image: "/pics/sununda.jpg",
   },
 ];
 
