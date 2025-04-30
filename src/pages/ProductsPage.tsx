@@ -67,7 +67,7 @@ const snacks = [
   { name: "Kara", description: "Crunchy, spicy snack mix", price: "₹360 per kg", image: karaImage},
   { name: "Rings", description: "Crispy and savory", price: "₹360 per kg", image: ringsImage},
   { name: "Boondi", description: "Light, airy, and crisp", price: "₹360 per kg", image: boondiImage},
-  { name: "Masala Palli", description: "Spicy crunchy peanuts", price: "₹360 per kg", image: masalaPalliImage},
+  { name: "Masala Palli", description: "Spicy crunchy peanuts", price: "₹360 per kg", image: "public/pics/masalapalli.jpg"},
   { name: "Green Peas", description: "Crunchy peas with a spicy kick", price: "₹360 per kg",  image:greenPeasImage},
   { name: "Atkula Chudwa", description: "Flattened rice mix with spice", price: "₹360 per kg", image : atkulaChudwaImage},
   { name: "Plain Sev", description: "Golden gram, crispy strands", price: "₹360 per kg", image : plainSevImage},
