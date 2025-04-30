@@ -333,7 +333,7 @@ const papads = [
     description: "Crispy, melt-in-mouth",
     price: "₹150 / 200grms",
     image: "/pics/sabudanaPapad.jpg",
-  },
+  }
 ];
 
 const ProductsPage: React.FC = () => {
