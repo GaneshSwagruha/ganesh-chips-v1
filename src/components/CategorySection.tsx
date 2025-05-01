@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
@@ -28,7 +28,11 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   showButton = false, // Default to false
 }) => {
   const isHome = id === "home"; // Only show button if section is home
+  const [visibleItems, setVisibleItems] = useState(6);
 
+  const loadMore = () => {
+    setVisibleItems((prev) => prev + 6);
+  };
   return (
     <section id={id} className={`py-16 ${bgColor}`}>
       <div className="container mx-auto px-4 md:px-6">
@@ -46,7 +50,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product, index) => (
+          {products.slice(0, visibleItems).map((product, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col">
                 <ProductCard
@@ -84,6 +88,16 @@ const CategorySection: React.FC<CategorySectionProps> = ({
               </Link>
             </div>
           )}
+         {visibleItems < products.length && (
+  <div className="w-full flex justify-center mt-8 col-span-2 sm:col-span-2 lg:col-span-3">
+    <button
+      onClick={loadMore}
+      className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-6 rounded-full transition-colors"
+    >
+      Load More
+    </button>
+  </div>
+)}
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import FeaturesSection from "../components/FeaturesSection";
 import CategorySection from "../components/CategorySection";
 import ContactBanner from "../components/ContactBanner";
-import { Link } from "react-router-dom";
+import ScrollToTopButton from "../components/ScrollToTopButton"; // adjust path if needed
 
 const snackPreview = [
   {
@@ -73,6 +73,7 @@ const HomePage: React.FC = () => {
       />
 
       <ContactBanner />
+      <ScrollToTopButton />
       {/* {snackPreview.map((product, index) => (
         <ProductCard
           key={index}

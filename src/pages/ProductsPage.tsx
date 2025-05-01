@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import CategorySection from "../components/CategorySection";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
+// Loading spinner component
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center h-full">
+    <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-[#FF7300]"></div>
+  </div>
+);
 // Snacks data
 const snacks = [
   {
@@ -337,6 +344,23 @@ const papads = [
 ];
 
 const ProductsPage: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="bg-[#880000] from-primary-600 to-primary-700 py-20">
@@ -422,8 +446,6 @@ const ProductsPage: React.FC = () => {
         bgColor="bg-white"
       />
 
-      
-
       <section className="py-16 bg-primary-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8">
@@ -447,6 +469,7 @@ const ProductsPage: React.FC = () => {
             </a>
           </div>
         </div>
+        <ScrollToTopButton />
       </section>
     </div>
   );
