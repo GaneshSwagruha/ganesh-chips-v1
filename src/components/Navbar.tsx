@@ -44,15 +44,23 @@ const Navbar: React.FC = () => {
           <NavLink to="/" className="flex items-center gap-2 sm:gap-3">
             <img
               src={mainLogo}
-              className="w-[45px] h-[50px] object-cover"
+              className="w-[45px] h-[40px] object-cover"
               alt="logo"
             />
-            <h1
-              className="font-heading text-lg sm:text-xl font-bold transition-colors"
-              style={{ color: scrolled ? "#880000" : "#FFFFFF" }}
-            >
-              Ganesh Swagruha Foods
-            </h1>
+            <div className="leading-tight">
+              <h1
+                className="font-heading text-lg sm:text-xl font-bold transition-colors"
+                style={{ color: scrolled ? "#880000" : "#FFFFFF" }}
+              >
+                Ganesh Swagruha
+              </h1>
+              <span
+                className="block text-xs sm:text-sm font-medium"
+                style={{ color: scrolled ? "#880000" : "#FFFFFF" }}
+              >
+                Foods
+              </span>
+            </div>
           </NavLink>
 
           {/* Desktop Menu */}
@@ -86,9 +94,15 @@ const Navbar: React.FC = () => {
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X
+                className="h-6 w-6"
+                style={{ color: scrolled ? "#880000" : "#FFFFFF" }}
+              />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu
+                className="h-6 w-6"
+                style={{ color: scrolled ? "#880000" : "#FFFFFF" }}
+              />
             )}
           </button>
         </nav>
