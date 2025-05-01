@@ -29,12 +29,13 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-900 mb-4 leading-tight">
-              Welcome to{" "}
-              <span className="text-accent-600" style={{ color: "#D0021B" }}>
-                Ganesh Swagruha Foods
-              </span>
-            </h1>
+            <h1 className="mt-6 font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-900 mb-4 leading-tight">
+  Welcome to{" "}
+  <span className="text-accent-600" style={{ color: "#D0021B" }}>
+    Ganesh Swagruha Foods
+  </span>
+</h1>
+
 
             <p className="text-lg md:text-xl text-neutral-700 mb-6 leading-relaxed">
               Tradition in every touch, quality in every bite — handmade for
