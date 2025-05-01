@@ -33,9 +33,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, price, ima
         <p className="text-neutral-600 mb-4">{description}</p>
         <div className="flex justify-between items-center">
           <span className="text-accent-700 font-bold">{price}</span>
-          <span className="bg-secondary-100 text-secondary-800 px-3 py-1 rounded-full text-xs font-medium">
+          {/* <span className="bg-secondary-100 text-secondary-800 px-3 py-1 rounded-full text-xs font-medium">
             In-store Only
-          </span>
+          </span> */}
         </div>
       </div>
     </motion.div>

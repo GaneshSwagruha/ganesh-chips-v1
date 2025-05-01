@@ -422,6 +422,8 @@ const ProductsPage: React.FC = () => {
         bgColor="bg-white"
       />
 
+      
+
       <section className="py-16 bg-primary-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8">

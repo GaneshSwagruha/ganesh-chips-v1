@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import FeaturesSection from "../components/FeaturesSection";
 import CategorySection from "../components/CategorySection";
 import ContactBanner from "../components/ContactBanner";
+import { Link } from "react-router-dom";
 
 const snackPreview = [
   {
@@ -53,11 +54,12 @@ const HomePage: React.FC = () => {
       <FeaturesSection />
 
       <CategorySection
-        id="snacks-preview"
-        title="Popular Snacks"
-        description="Craving something savory? Our delicious snacks are perfect for any time of day."
+        id="home"
+        title="Popular Picks"
+        description="Check out our best-selling items."
         products={snackPreview}
-        bgColor="bg-cream"
+        showButton={true}
+
       />
 
       <CategorySection
@@ -66,6 +68,8 @@ const HomePage: React.FC = () => {
         description="Celebrate life's sweet moments with our traditional handcrafted sweets."
         products={sweetsPreview}
         bgColor="bg-white"
+        showButton={true}
+
       />
 
       <ContactBanner />
