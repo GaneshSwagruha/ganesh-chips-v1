@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
@@ -18,6 +18,20 @@ interface CategorySectionProps {
   bgColor?: string;
   showButton?: boolean; // Added prop for showing button
 }
+
+// Add this useEffect hook at the top of your CategorySection component
+// useEffect(() => {
+//   // Check if we're at the exact hash match
+//   if (window.location.hash === `#${id}`) {
+//     window.scrollTo(0, 0);
+//     setTimeout(() => {
+//       const element = document.getElementById(id);
+//       if (element) {
+//         element.scrollIntoView({ behavior: 'smooth' });
+//       }
+//     }, 100);
+//   }
+// }, [id]);
 
 const CategorySection: React.FC<CategorySectionProps> = ({
   id,
@@ -67,7 +81,8 @@ const CategorySection: React.FC<CategorySectionProps> = ({
                   <div className="flex justify-center items-center">
                     <Link
                       to="/products"
-                      className="mt-40 w-full text-center bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
+                      className="mt-40 w-full text-center bg-primary-700 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
+                      onClick={() => window.scrollTo(0, 0)}
                     >
                       View More Products
                     </Link>
@@ -83,6 +98,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
               <Link
                 to="/products"
                 className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
+                onClick={() => window.scrollTo(0, 0)}
               >
                 View More Products
               </Link>

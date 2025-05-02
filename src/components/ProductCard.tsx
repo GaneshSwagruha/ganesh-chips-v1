@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { motion } from "framer-motion";
 import Zoom from "react-medium-image-zoom";
-import LazyImage from "../components/LazyImage";
+import LazyImage from "./LazyImage";
 
 import "react-medium-image-zoom/dist/styles.css"; // Important: import the styles!
 
@@ -13,7 +13,6 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
-  // const [loaded, setLoaded] = useState(false)
 
   name,
   description,

@@ -151,7 +151,7 @@ const traditionalSnacks = [
     name: "Mirchi Appalu",
     description: "Fresh chili rice crisps",
     price: "₹400 per kg",
-    image: "/pics/mirchiAppalu.jpg",
+    image: "/pics/pachiMirchiAppalu.jpg",
   },
   {
     name: "Nuvvulu Sugar",

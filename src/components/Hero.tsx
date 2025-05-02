@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import chipsImage from "/pics/chips.jpg";
-
+import ScrollToTopLink from "./ScrollIntoTopLink";
 const Hero: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-primary-50 to-cream min-h-[90vh] flex items-center">
@@ -47,12 +47,14 @@ const Hero: React.FC = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link
+              <ScrollToTopLink
                 to="/products"
                 className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
+               onClick={() => window.scrollTo(0, 0)}
+ 
               >
                 Explore Our Products
-              </Link>
+              </ScrollToTopLink>
               <Link
                 to="/visit"
                 className="bg-white hover:bg-neutral-100 text-primary-700 font-medium py-3 px-6 rounded-full border-2 border-primary-600 transition-colors shadow-md hover:shadow-lg"
