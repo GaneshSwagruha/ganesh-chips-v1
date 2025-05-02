@@ -31,7 +31,7 @@ const sweetsPreview = [
     name: "Boondi Laddu",
     description: "Extra large, extra tasty",
     price: "₹400 per kg",
-    image: "/pics/boondi.jpg",
+    image: "/pics/boondiLaddu.jpg",
   },
   {
     name: "Bakshalu",

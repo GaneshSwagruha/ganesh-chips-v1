@@ -88,16 +88,16 @@ const CategorySection: React.FC<CategorySectionProps> = ({
               </Link>
             </div>
           )}
-         {visibleItems < products.length && (
-  <div className="w-full flex justify-center mt-8 col-span-2 sm:col-span-2 lg:col-span-3">
-    <button
-      onClick={loadMore}
-      className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-6 rounded-full transition-colors"
-    >
-      Load More
-    </button>
-  </div>
-)}
+          {visibleItems < products.length && (
+            <div className="w-full flex justify-center mt-8 col-span-2 sm:col-span-2 lg:col-span-3">
+              <button
+                onClick={loadMore}
+                className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-6 rounded-full transition-colors"
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
