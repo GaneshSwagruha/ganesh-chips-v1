@@ -100,6 +100,24 @@ const traditionalSnacks = [
     image: "/pics/appalu.jpg",
   },
   {
+    name: "Small Appalu",
+    description: "Mini rice flour snacks",
+    price: "₹600 per kg",
+    image: "/pics/smallAppalu.jpg",
+  },
+  {
+    name: "Small Sakinalu",
+    description: "Mini spiral crispy snack",
+    price: "₹600 per kg",
+    image: "/pics/smallsakinalu.jpg",
+  },
+  {
+    name: "Podugu Muruku",
+    description: "Thick, bold, crunchy strands",
+    price: "₹400 per kg",
+    image: "/pics/poduguMuruku.jpg",
+  },
+  {
     name: "Karam Gavvalu",
     description: "Crispy, bold, and spicy bites",
     price: "₹400 per kg",
@@ -111,12 +129,7 @@ const traditionalSnacks = [
     price: "₹400 per kg",
     image: "/pics/muruku.jpg",
   },
-  {
-    name: "Podugu Muruku",
-    description: "Thick, bold, crunchy strands",
-    price: "₹400 per kg",
-    image: "/pics/poduguMuruku.jpg",
-  },
+
   {
     name: "Sannam Pusa",
     description: "Golden gram crispy strands",
@@ -129,18 +142,7 @@ const traditionalSnacks = [
     price: "₹400 per kg",
     image: "/pics/roundMuruku.jpg",
   },
-  {
-    name: "Small Appalu",
-    description: "Mini rice flour snacks",
-    price: "₹600 per kg",
-    image: "/pics/smallAppalu.jpg",
-  },
-  {
-    name: "Small Sakinalu",
-    description: "Mini spiral crispy snack",
-    price: "₹600 per kg",
-    image: "/pics/smallsakinalu.jpg",
-  },
+
   {
     name: "Namak Pari",
     description: "Savory diamond snack",
@@ -158,6 +160,18 @@ const traditionalSnacks = [
     description: "Sesame-sugar pocket delight",
     price: "₹500 per kg",
     image: "/pics/nuvvuluSugar.jpg",
+  },
+  {
+    name: "Garijalu (Ravva)",
+    description: "Stuffed with coconut and jaggery",
+    price: "₹500 per kg",
+    image: "/pics/garijaluRava.jpg",
+  },
+  {
+    name: "Garijalu (Coconut)",
+    description: "Coconut joy in every bite",
+    price: "₹500 per kg",
+    image: "/pics/garijaluCocunut.jpg",
   },
   {
     name: "Madugulu",
@@ -187,18 +201,6 @@ const traditionalSnacks = [
 
 // Sweets data
 const sweets = [
-  {
-    name: "Garijalu (Ravva)",
-    description: "Stuffed with coconut and jaggery",
-    price: "₹500 per kg",
-    image: "/pics/garijaluRava.jpg",
-  },
-  {
-    name: "Garijalu (Coconut)",
-    description: "Coconut joy in every bite",
-    price: "₹500 per kg",
-    image: "/pics/garijaluCocunut.jpg",
-  },
   {
     name: "Bakshalu",
     description: "Jaggery and dal magic",
@@ -340,7 +342,7 @@ const papads = [
     description: "Crispy, melt-in-mouth",
     price: "₹150 / 200grms",
     image: "/pics/sabudanaPapad.jpg",
-  }
+  },
 ];
 
 const ProductsPage: React.FC = () => {
