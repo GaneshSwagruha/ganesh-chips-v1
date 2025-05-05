@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import mainLogo from "../../public/pics/logo.png";
+import ScrollToTopLink from "./ScrollIntoTopLink";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,11 +47,15 @@ const Navbar: React.FC = () => {
               src={mainLogo}
               className="w-[45px] h-[40px] object-cover"
               alt="logo"
+              onClick={() => window.scrollTo(0, 0)}
+
             />
             <div className="leading-tight">
               <h1
                 className="font-heading text-lg sm:text-xl font-bold transition-colors"
                 style={{ color: scrolled ? "#880000" : "#FFFFFF" }}
+                onClick={() => window.scrollTo(0, 0)}
+
               >
                 Ganesh Swagruha
               </h1>

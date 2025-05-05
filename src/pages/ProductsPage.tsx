@@ -77,6 +77,12 @@ const snacks = [
     price: "₹360 per kg",
     image: "/pics/thinGati.jpg",
   },
+  {
+    name: "Paper Atkulu",
+    description: "Festival feels in every layer",
+    price: "₹360 per kg",
+    image: "/pics/paperAtkulu.jpg",
+  }
 ];
 
 // Traditional Snacks data
@@ -162,6 +168,12 @@ const traditionalSnacks = [
     image: "/pics/nuvvuluSugar.jpg",
   },
   {
+    name: "Nuvvulu Bellam",
+    description: "Sesame-jaggery pockets",
+    price: "₹550 per kg",
+    image: "/pics/nuvvuluBellam.jpg",
+  },
+  {
     name: "Garijalu (Ravva)",
     description: "Stuffed with coconut and jaggery",
     price: "₹500 per kg",
@@ -212,12 +224,6 @@ const sweets = [
     description: "Jaggery-kissed rice pops",
     price: "₹300 per kg",
     image: "/pics/murmuraLaddu.jpg",
-  },
-  {
-    name: "Nuvvulu Bellam",
-    description: "Sesame-jaggery pockets",
-    price: "₹550 per kg",
-    image: "/pics/nuvvuluBellam.jpg",
   },
   {
     name: "Laddu",
@@ -343,6 +349,52 @@ const papads = [
     price: "₹150 / 200grms",
     image: "/pics/sabudanaPapad.jpg",
   },
+  {
+    name: "koradalu Papad",
+    description: "Taste of village crunch",
+    price: "₹150 / 200grms",
+    image: "/pics/koradalu.jpg",
+  },
+];
+
+const pickles = [
+  {
+    name: "Mango Pickle",
+    description: "Classic mango, village-style spice.",
+    price: "₹500 per kg",
+    image: "/pics/mangoPickle.jpg",
+  },
+  {
+    name: "Tamarind Pickle",
+    description: "Tangy taste from village kitchens.",
+    price: "₹500 per kg",
+    image: "/pics/tamarindPickle.jpg",
+  },
+  {
+    name: "Tomato Pickle",
+    description: "Ripe tomatoes with village-style flavor.",
+    price: "₹500 per kg",
+    image: "/pics/tomatoPickle.jpg",
+  },
+  {
+    name: "Lemon Pickle",
+    description: "Sour and spicy, just like home.",
+    price: "₹500 per kg",
+    image: "/pics/lemonPickle.jpg",
+  },
+  {
+    name: "Yellow Lemon Pickle",
+    description: "Bright taste with a touch of tradition.",
+    price: "₹500 per kg",
+
+    image: "/pics/yellowLemon.jpg",
+  },
+  {
+    name: "Uppu Sogi Pickle",
+    description: "Salted delight with a native touch.",
+    price: "₹500 per kg",
+    image: "/pics/uppuSogi.jpg",
+  },
 ];
 
 const ProductsPage: React.FC = () => {
@@ -412,6 +464,12 @@ const ProductsPage: React.FC = () => {
             >
               Papads
             </a>
+            <a
+              href="#pickles"
+              className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-4 rounded-full transition-colors"
+            >
+              Pickles
+            </a>
           </div>
         </div>
       </div>
@@ -446,6 +504,14 @@ const ProductsPage: React.FC = () => {
         description="Crispy, flavorful accompaniments to complete your meal."
         products={papads}
         bgColor="bg-white"
+      />
+
+      <CategorySection
+        id="pickles"
+        title="Pickles"
+        description="Spice of Tradition in Every Jar."
+        products={pickles}
+        bgColor="bg-cream"
       />
 
       <section className="py-16 bg-primary-100">

@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg"
+      className="bg-white rounded-lg shadow-md overflow-hidden lex flex-col h-full"
       whileHover={{ y: -5 }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
           {/* Added mt-2 for top margin */}
           {name}
         </h3>{" "}
-        <p className="text-neutral-600 mb-3">{description}</p>
+        <p className="text-gray-600 mb-4 line-clamp-2">{description}</p>
+        
         <div className="flex justify-between items-center">
           <span className="text-accent-700 font-bold">{price}</span>
         </div>

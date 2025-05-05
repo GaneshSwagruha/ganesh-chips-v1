@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
@@ -61,6 +61,13 @@ const CategorySection: React.FC<CategorySectionProps> = ({
             {title}
           </h2>
           <p className="max-w-3xl mx-auto text-neutral-700">{description}</p>
+
+          {/* Conditionally show oil info only in pickles section */}
+          {id === "pickles" && (
+  <p className="mt-4 text-lg font-semibold text-[#D64500] bg-[#FFF2E5] px-4 py-2 rounded-lg inline-block">
+  Peanut/Sesame oil – ₹600/kg | Custom orders | Minimum. 1 kg
+            </p>
+          )}
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
