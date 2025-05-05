@@ -18,7 +18,7 @@
       "destination": "/sitemap.xml"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!sitemap\\.xml).*)",
       "destination": "/"
     }
   ]
