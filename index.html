@@ -44,13 +44,19 @@
   
     <!-- Structured Data for Google Site Name -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Ganesh Swagruha Foods",
-      "url": "https://www.ganeshswagruhafoods.com"
-    }
-    </script>
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ganesh Swagruha Foods",
+        "url": "https://www.ganeshswagruhafoods.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.ganeshswagruhafoods.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+      </script>
+      
   </head>
   
   <body>
