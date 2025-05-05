@@ -9,9 +9,7 @@
         }
       ],
       "destination": "https://www.ganeshswagruhafoods.com/:path*",
-      "permanent": true,
-      "statusCode": 301
-
+      "permanent": true
     }
   ],
   "rewrites": [
