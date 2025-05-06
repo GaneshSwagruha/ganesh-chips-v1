@@ -318,7 +318,7 @@ const sweets = [
   {
     name: "Dry Fruit Laddu",
     description: "Power-packed protein bites",
-    price: "₹1200 per kg",
+    price: "₹300 / 250grms",
     image: "/pics/dryFruitLaddu.jpg",
   },
   {
