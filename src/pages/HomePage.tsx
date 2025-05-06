@@ -9,19 +9,19 @@ const snackPreview = [
   {
     name: "Chips",
     description: "Thin, crispy potato slices",
-    price: "₹440 per kg",
+    price: "₹110 / 250 grms",
     image: "/pics/chips.jpg",
   },
   {
     name: "Kara",
     description: "Crunchy, spicy snack mix",
-    price: "₹360 per kg",
+    price: "₹90 / 250 grms",
     image: "/pics/kara.jpg",
   },
   {
-    name: "rings",
-    description: "Light, airy, and crisp",
-    price: "₹360 per kg",
+    name: "Rings",
+    description: "Crispy and savory",
+    price: "₹90 / 250 grms",
     image: "/pics/rings.jpg",
   },
 ];
@@ -30,19 +30,19 @@ const sweetsPreview = [
   {
     name: "Boondi Laddu",
     description: "Extra large, extra tasty",
-    price: "₹400 per kg",
+    price: "₹100 / 250grms",
     image: "/pics/boondiLaddu.jpg",
   },
   {
     name: "Bakshalu",
     description: "Jaggery and dal magic",
-    price: "₹350 per kg",
+    price: "₹125 / 250grms",
     image: "/pics/bakshalu.jpg",
   },
   {
-    name: "Sununda (pure ghee)",
-    description: "Minumulu & ghee Goodness",
-    price: "600 per kg",
+    name: "Sununda (Pure Ghee)",
+    description: "Minumulu and ghee goodness",
+    price: "₹150 / 250grms",
     image: "/pics/sununda.jpg",
   },
 ];
