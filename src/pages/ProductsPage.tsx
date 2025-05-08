@@ -422,9 +422,9 @@ const ProductsPage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             className="text-center text-white"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1}}
-            transition={{ duration: 0.3}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
               Our Product Range
