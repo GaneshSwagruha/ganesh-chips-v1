@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             <div className="relative">
               {/* Main image */}
               <img
-                src={chipsImage}
+                src={"https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//chips.jpg"}
                 alt="Traditional Indian sweets and snacks"
                 className="rounded-lg shadow-xl w-full object-cover h-[500px]"
               />
