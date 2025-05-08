@@ -1,9 +1,9 @@
 import { Suspense, lazy, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-const Navbar = lazy(() => import("./components/Navbar"));
-const Footer = lazy(() => import("./components/Footer"));
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ProductsPage = lazy(() => import("./pages/ProductsPage"));
 const VisitPage = lazy(() => import("./pages/VisitPage"));
@@ -25,21 +25,21 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <div className="font-body bg-cream min-h-screen flex flex-col">
-        <ScrollToTop />
-        <Navbar />
-        <main className="flex-grow">
+    <div className="font-body bg-cream min-h-screen flex flex-col">
+      <ScrollToTop />
+      <Navbar />
+      <main className="flex-grow">
+        <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/visit" element={<VisitPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Suspense>
+        </Suspense>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -158,7 +158,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-700 mt-8 pt-6 text-center text-primary-300 text-sm">
+        <div className="border-t border-white mt-8 pt-6 text-center text-primary-300 text-sm">
           <p>
             &copy; {currentYear} Ganesh Swagruha Foods. All rights reserved.
           </p>
