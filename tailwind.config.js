@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['"Tiro Devanagari Hindi"', 'serif'],
+        heading: ['"Alata"', 'serif'],
         body: ['Poppins', 'sans-serif'],
       },
       colors: {
