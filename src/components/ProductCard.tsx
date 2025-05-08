@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { motion } from "framer-motion";
-import Zoom from "react-medium-image-zoom";
+// import Zoom from "react-medium-image-zoom";
 import LazyImage from "./LazyImage";
 
 import "react-medium-image-zoom/dist/styles.css"; // Important: import the styles!
@@ -29,9 +29,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
       transition={{ duration: 0.4 }}
     >
       <div className="p-5">
-        <Zoom zoomMargin={40} overlayBgColorEnd="rgba(0,0,0,0.85)">
-          <LazyImage src={image} alt={name} className="w-full h-full" />
-        </Zoom>
+        {/* <Zoom zoomMargin={40} overlayBgColorEnd="rgba(0,0,0,0.85)">
+        </Zoom> */}
+        <LazyImage src={image} alt={name} className="w-full h-full" />
+
         <h3 className="text-lg font-semibold mb-1 mt-3">
           {" "}
           {/* Added mt-2 for top margin */}
