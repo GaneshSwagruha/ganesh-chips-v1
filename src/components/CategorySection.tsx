@@ -50,7 +50,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   return (
     <section id={id} className={`py-16 ${bgColor}`}>
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div
+        <div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   Peanut/Sesame oil – ₹600/kg | Custom orders | Minimum. 1 kg
             </p>
           )}
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.slice(0, visibleItems).map((product, index) => (
