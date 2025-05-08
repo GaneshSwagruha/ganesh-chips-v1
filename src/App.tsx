@@ -28,7 +28,7 @@ function App() {
     <div className="font-body bg-cream min-h-screen flex flex-col">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow" style={{minHeight : "100vh"}}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
