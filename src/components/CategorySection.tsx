@@ -19,20 +19,6 @@ interface CategorySectionProps {
   showButton?: boolean; // Added prop for showing button
 }
 
-// Add this useEffect hook at the top of your CategorySection component
-// useEffect(() => {
-//   // Check if we're at the exact hash match
-//   if (window.location.hash === `#${id}`) {
-//     window.scrollTo(0, 0);
-//     setTimeout(() => {
-//       const element = document.getElementById(id);
-//       if (element) {
-//         element.scrollIntoView({ behavior: 'smooth' });
-//       }
-//     }, 100);
-//   }
-// }, [id]);
-
 const CategorySection: React.FC<CategorySectionProps> = ({
   id,
   title,
@@ -50,7 +36,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   return (
     <section id={id} className={`py-16 ${bgColor}`}>
       <div className="container mx-auto px-4 md:px-6">
-        <div
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,11 +50,11 @@ const CategorySection: React.FC<CategorySectionProps> = ({
 
           {/* Conditionally show oil info only in pickles section */}
           {id === "pickles" && (
-  <p className="mt-4 text-lg font-semibold text-[#D64500] bg-[#FFF2E5] px-4 py-2 rounded-lg inline-block">
-  Peanut/Sesame oil – ₹600/kg | Custom orders | Minimum. 1 kg
+            <p className="mt-4 text-lg font-semibold text-[#D64500] bg-[#FFF2E5] px-4 py-2 rounded-lg inline-block">
+              Peanut/Sesame oil – ₹600/kg | Custom orders | Minimum. 1 kg
             </p>
           )}
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.slice(0, visibleItems).map((product, index) => (

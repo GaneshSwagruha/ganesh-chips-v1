@@ -420,7 +420,7 @@ const ProductsPage: React.FC = () => {
     <div>
       <div className="bg-[#880000] from-primary-600 to-primary-700 py-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div
+          <motion.div
             className="text-center text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -434,7 +434,7 @@ const ProductsPage: React.FC = () => {
               sweets, crafted with authentic ingredients and time-honored
               recipes.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
 

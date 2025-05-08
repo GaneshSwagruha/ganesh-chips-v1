@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 // import Zoom from "react-medium-image-zoom";
 import LazyImage from "./LazyImage";
@@ -13,7 +13,6 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
-
   name,
   description,
   price,
@@ -29,17 +28,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
       transition={{ duration: 0.4 }}
     >
       <div className="p-5">
-        {/* <Zoom zoomMargin={40} overlayBgColorEnd="rgba(0,0,0,0.85)">
-        </Zoom> */}
         <LazyImage src={image} alt={name} className="w-full h-full" />
-
         <h3 className="text-lg font-semibold mb-1 mt-3">
           {" "}
           {/* Added mt-2 for top margin */}
           {name}
         </h3>{" "}
         <p className="text-gray-600 mb-4 line-clamp-2">{description}</p>
-        
         <div className="flex justify-between items-center">
           <span className="text-accent-700 font-bold">{price}</span>
         </div>
