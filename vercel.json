@@ -8,9 +8,6 @@
           "value": "ganeshswagruhafoods.com"
         }
       ],
-      "headers": [
-        { "key": "Content-Encoding", "value": "br" }
-      ],
       "destination": "https://www.ganeshswagruhafoods.com/:path*",
       "permanent": true
     }
