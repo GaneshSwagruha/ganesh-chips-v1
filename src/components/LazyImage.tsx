@@ -1,5 +1,5 @@
 // components/LazyImage.tsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 interface LazyImageProps {
@@ -11,46 +11,59 @@ interface LazyImageProps {
 const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
-  const [imageSrc, setImageSrc] = useState<string>("");
   const [retryCount, setRetryCount] = useState(0);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const observerRef = useRef<IntersectionObserver>();
+  const currentSrc = useRef<string>("");
+
+  const cleanUrl = src.replace(/([^:]\/)\/+/g, "$1");
 
   useEffect(() => {
-    // Clean up the URL by removing double slashes
-    const cleanUrl = src.replace(/([^:]\/)\/+/g, "$1");
-    
-    // Create a new image object to preload
-    const img = new Image();
-    img.src = cleanUrl;
-    
-    img.onload = () => {
-      setImageSrc(cleanUrl);
+    if (!cleanUrl || error || retryCount > 2) return;
+
+    const handleLoad = () => {
       setLoaded(true);
       setError(false);
     };
-    
-    img.onerror = () => {
+
+    const handleError = () => {
       if (retryCount < 2) {
-        // Retry loading the image after a short delay
-        setTimeout(() => {
-          setRetryCount(prev => prev + 1);
-        }, 1000);
+        setTimeout(() => setRetryCount(c => c + 1), 1000);
       } else {
         setError(true);
         setLoaded(true);
       }
     };
 
+    // Intersection Observer setup
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && imgRef.current && !currentSrc.current) {
+          const img = new Image();
+          img.src = cleanUrl;
+          img.onload = handleLoad;
+          img.onerror = handleError;
+          currentSrc.current = cleanUrl;
+        }
+      });
+    }, {
+      rootMargin: '200px', // Start loading 200px before entering viewport
+      threshold: 0.01
+    });
+
+    if (imgRef.current) {
+      observerRef.current.observe(imgRef.current);
+    }
+
     return () => {
-      // Cleanup
-      img.onload = null;
-      img.onerror = null;
+      observerRef.current?.disconnect();
     };
-  }, [src, retryCount]);
+  }, [cleanUrl, retryCount, error]);
 
   if (error) {
     return (
       <div className={`bg-gray-200 flex items-center justify-center rounded-lg ${className}`}>
-        <span className="text-gray-500 text-sm">Loading image...</span>
+        <span className="text-gray-500 text-sm">Image unavailable</span>
       </div>
     );
   }
@@ -58,25 +71,21 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
   return (
     <div className={`relative ${className}`}>
       {!loaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></div>
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg" />
       )}
+      
       <motion.img
-        src={imageSrc}
+        ref={imgRef}
+        src={currentSrc.current}
         alt={alt}
         loading="lazy"
-        className={`w-full h-full object-cover rounded-lg transition-opacity duration-300 ${
-          loaded ? "opacity-100" : "opacity-0"
+        className={`w-full h-full object-cover rounded-lg ${
+          loaded ? 'opacity-100' : 'opacity-0'
         }`}
         initial={{ opacity: 0 }}
         animate={{ opacity: loaded ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        onError={() => {
-          if (retryCount < 2) {
-            setRetryCount(prev => prev + 1);
-          } else {
-            setError(true);
-          }
-        }}
+        onError={() => setRetryCount(c => c + 1)}
       />
     </div>
   );

@@ -50,8 +50,7 @@ const Hero: React.FC = () => {
               <ScrollToTopLink
                 to="/products"
                 className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
-               onClick={() => window.scrollTo(0, 0)}
- 
+                onClick={() => window.scrollTo(0, 0)}
               >
                 Explore Our Products
               </ScrollToTopLink>
@@ -73,7 +72,9 @@ const Hero: React.FC = () => {
             <div className="relative">
               {/* Main image */}
               <img
-                src={"https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//chips.jpg"}
+                src={
+                  "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/chips.jpg"
+                }
                 alt="Traditional Indian sweets and snacks"
                 className="rounded-lg shadow-xl w-full object-cover h-[500px]"
               />

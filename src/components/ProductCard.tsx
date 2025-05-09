@@ -28,7 +28,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
       transition={{ duration: 0.4 }}
     >
       <div className="p-5">
-        <LazyImage src={image} alt={name} className="w-full h-full" />
+      <LazyImage 
+          src={`${image}?width=600&quality=85&format=webp`} 
+          alt={name} 
+          className="w-full h-full"
+        />
         <h3 className="text-lg font-semibold mb-1 mt-3">
           {" "}
           {/* Added mt-2 for top margin */}
