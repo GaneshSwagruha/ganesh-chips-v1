@@ -1,11 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import chipsImage from "/pics/chips.jpg";
+import { Helmet } from "react-helmet";
 import ScrollToTopLink from "./ScrollIntoTopLink";
+
 const Hero: React.FC = () => {
+  // Optimized hero image URL with WebP conversion
+  const heroImageUrl = "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/chips.jpg?width=800&quality=85&format=webp";
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-primary-50 to-cream min-h-[90vh] flex items-center">
+      {/* Preload and connection optimization */}
+      <Helmet>
+        <link rel="preconnect" href="https://zuedkxcivmpqpiplbyrj.supabase.co" />
+        <link rel="preload" href={heroImageUrl} as="image" />
+      </Helmet>
+
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-accent-200 opacity-30 blur-xl"></div>
@@ -70,13 +80,16 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
-              {/* Main image */}
+              {/* Optimized hero image */}
               <img
-                src={
-                  "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/chips.jpg"
-                }
+                src={heroImageUrl}
                 alt="Traditional Indian sweets and snacks"
                 className="rounded-lg shadow-xl w-full object-cover h-[500px]"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                width={800}
+                height={500}
               />
 
               {/* Decorative elements */}

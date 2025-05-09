@@ -28,10 +28,10 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   showButton = false, // Default to false
 }) => {
   const isHome = id === "home"; // Only show button if section is home
-  const [visibleItems, setVisibleItems] = useState(6);
+  const [visibleItems, setVisibleItems] = useState(4);
 
   const loadMore = () => {
-    setVisibleItems((prev) => prev + 6);
+    setVisibleItems((prev) => prev + 4);
   };
   return (
     <section id={id} className={`py-16 ${bgColor}`}>
