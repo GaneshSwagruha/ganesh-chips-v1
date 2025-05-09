@@ -11,21 +11,21 @@ const snackPreview = [
     description: "Thin, crispy potato slices",
     price: "₹110 / 250 grms",
     image:
-      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/chips.jpg?width=600&quality=85&format=webp",
+      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//chips.jpg",
   },
   {
     name: "Kara",
     description: "Crunchy, spicy snack mix",
     price: "₹90 / 250 grms",
     image:
-      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/kara.jpg?width=600&quality=85&format=webp",
+      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//kara.jpg",
   },
   {
     name: "Rings",
     description: "Crispy and savory",
     price: "₹90 / 250 grms",
     image:
-      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/rings.jpg?width=600&quality=85&format=webp",
+      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//rings.jpg",
   },
 ];
 
@@ -35,21 +35,21 @@ const sweetsPreview = [
     description: "Extra large, extra tasty",
     price: "₹100 / 250grms",
     image:
-      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/boondiLaddu.jpg?width=600&quality=85&format=webp",
+      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//boondiLaddu.jpg",
   },
   {
     name: "Bakshalu",
     description: "Jaggery and dal magic",
     price: "₹125 / 250grms",
     image:
-      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/bakshalu.jpg?width=600&quality=85&format=webp",
+      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//bakshalu.jpg",
   },
   {
     name: "Sununda (Pure Ghee)",
     description: "Minumulu and ghee goodness",
     price: "₹150 / 250grms",
     image:
-      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/sununda.jpg?width=600&quality=85&format=webp",
+      "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems//sununda.jpg",
   },
 ];
 
