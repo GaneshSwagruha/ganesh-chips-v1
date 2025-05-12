@@ -116,7 +116,7 @@ const traditionalSnacks = [
   {
     name: "Appalu",
     description: "Flattened rice flour snack",
-    price: "₹100 / 250grms",
+    price: "₹125 / 250grms",
     image:
       "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/appalu.jpg",
   },
