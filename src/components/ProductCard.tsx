@@ -20,32 +20,32 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-md overflow-hidden lex flex-col h-full"
-      whileHover={{ y: -5 }}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-    >
-      <div className="p-5">
+    className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full"
+    whileHover={{ y: -5 }}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.4 }}
+  >
+    <div className="p-5 flex flex-col h-full">
       <LazyImage 
-          src={`${image}?width=700&quality=85&format=webp`} 
-          alt={name} 
-          className="w-full h-full"
-          
-        />
-        
-        <h3 className="text-lg font-semibold mb-1 mt-3">
-          {" "}
-          {/* Added mt-2 for top margin */}
-          {name}
-        </h3>{" "}
-        <p className="text-gray-600 mb-4 line-clamp-2">{description}</p>
-        <div className="flex justify-between items-center">
-          <span className="text-accent-700 font-bold">{price}</span>
-        </div>
+        src={`${image}?width=700&quality=85&format=webp`} 
+        alt={name} 
+        className="w-full h-full"
+      />
+  
+      <h3 className="text-lg font-semibold mb-1 mt-3">{name}</h3>
+  
+      <p className="text-gray-600 text-sm mb-4 line-clamp-2 min-h-[40px]">
+        {description}
+      </p>
+  
+      <div className="mt-auto pt-2 border-t border-gray-200">
+        <span className="text-accent-700 font-bold">{price}</span>
       </div>
-    </motion.div>
+    </div>
+  </motion.div>
+  
   );
 };
 
