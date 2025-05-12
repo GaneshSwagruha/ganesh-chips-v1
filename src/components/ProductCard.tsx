@@ -29,7 +29,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       <div className="p-5">
       <LazyImage 
-          src={`${image}?width=200&quality=45&format=webp`} 
+          src={`${image}?width=800&quality=90&format=webp`} 
+          srcSet={`${image}?width=800&quality=90&format=webp 1x, ${image}?width=1600&quality=90&format=webp 2x`}
           alt={name} 
           className="w-full h-full"
         />
