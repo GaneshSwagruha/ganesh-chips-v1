@@ -121,14 +121,14 @@ const traditionalSnacks = [
       "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/appalu.jpg",
   },
   {
-    name: "Small Appalu",
+    name: "Chinna Appalu",
     description: "Mini rice flour snacks",
     price: "₹150 / 250grms",
     image:
       "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/smallAppalu.jpg",
   },
   {
-    name: "Small Sakinalu",
+    name: "Chinna Sakinalu",
     description: "Mini spiral crispy snack",
     price: "₹150 / 250grms",
     image:
