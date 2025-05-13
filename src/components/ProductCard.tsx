@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import LazyImage from "./LazyImage";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 interface ProductCardProps {
   name: string;
@@ -23,15 +25,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      
     >
       {/* Product image */}
       <div className="w-full h-50 overflow-hidden">
-        <LazyImage
-          src={`${image}?width=700&quality=85&format=webp`}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+        <Zoom>
+          <LazyImage
+            src={`${image}?width=700&quality=85&format=webp`}
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        </Zoom>
       </div>
 
       {/* Product content */}
@@ -42,7 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </h3>
 
         {/* Product description */}
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3 min-h-[55px]">
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3 min-h-[35px]">
           {description}
         </p>
 

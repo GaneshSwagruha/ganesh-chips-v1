@@ -56,7 +56,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
           )}
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.slice(0, visibleItems).map((product, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col">
@@ -98,7 +98,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
             </div>
           )}
           {visibleItems < products.length && (
-            <div className="w-full flex justify-center mt-8 col-span-2 sm:col-span-2 lg:col-span-3">
+            <div className="w-full flex justify-center mt-8 col-span-2 sm:col-span-2 lg:col-span-4">
               <button
                 onClick={loadMore}
                 className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-6 rounded-full transition-colors"
