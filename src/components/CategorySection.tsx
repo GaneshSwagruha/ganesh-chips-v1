@@ -69,28 +69,28 @@ const CategorySection: React.FC<CategorySectionProps> = ({
               </div>
 
               {/* Only insert this block after 3rd item and only on home page */}
-              {showButton && index === 2 && (
-                <div className="block lg:hidden">
-                  <div className="flex justify-center items-center">
-                    <Link
-                      to="/products"
-                      className="mt-40 w-full text-center bg-primary-700 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
-                      onClick={() => window.scrollTo(0, 0)}
-                    >
-                      View More Products
-                    </Link>
-                  </div>
+              {showButton && index === 3 && (
+                <div className="block lg:hidden col-span-2">
+                <div className="flex justify-center mt-4">
+                  <Link
+                    to="/products"
+                    className="text-center bg-[#FF7300] hover:bg-[#e56700] text-white font-medium py-3 px-8 rounded-md transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    View More Products
+                  </Link>
                 </div>
+              </div>
               )}
             </React.Fragment>
           ))}
 
           {/* Only show bottom button on large screens and only on home page */}
           {showButton && (
-            <div className="hidden lg:flex justify-center items-center col-span-3 mt-6">
+            <div className="hidden lg:flex justify-center items-center col-span-full mt-6">
               <Link
                 to="/products"
-                className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-full transition-colors shadow-md hover:shadow-lg"
+                className="inline-block bg-[#FF7300] hover:bg-amber-700 text-white font-medium py-3 px-8 rounded-md transition-colors"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 View More Products

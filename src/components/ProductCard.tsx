@@ -42,6 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <img
             src={`${image}?width=1000&quality=100`}
             alt={name}
+            loading="lazy"
             className="max-w-full max-h-[80vh] object-contain rounded-lg"
           />
         </div>
