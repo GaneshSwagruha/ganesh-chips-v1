@@ -105,6 +105,7 @@ const traditionalSnacks = [
     price: "₹125 / 250grms",
     image:
       "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/sakinalu.jpg",
+    
   },
   {
     name: "Chegodi",

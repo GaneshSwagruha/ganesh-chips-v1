@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import LazyImage from "./LazyImage";
 import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
+import 'react-medium-image-zoom/dist/styles.css';
 
 interface ProductCardProps {
   name: string;
@@ -17,6 +17,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
   image,
 }) => {
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const handleZoomChange = (shouldZoom: boolean) => {
+    setIsZoomed(shouldZoom);
+  };
+
   return (
     <motion.div
       className="bg-white rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col h-full"
@@ -28,7 +34,38 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       {/* Product image */}
       <div className="w-full h-50 overflow-hidden">
-        <Zoom>
+        <Zoom
+          zoomMargin={40}
+          ZoomContent={({ img, onUnzoom }) => (
+            <div className="relative">
+              <div 
+                className="absolute top-4 right-4 z-50 bg-white rounded-full p-2 cursor-pointer shadow-lg"
+                onClick={onUnzoom}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+              {img}
+            </div>
+          )}
+          onZoomChange={handleZoomChange}
+          shouldHandleZoom={(e) => {
+            // Only zoom on double click
+            return e.detail === 2 || e.type === 'keydown';
+          }}
+        >
           <LazyImage
             src={`${image}?width=700&quality=85&format=webp`}
             alt={name}
