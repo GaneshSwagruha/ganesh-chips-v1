@@ -58,7 +58,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {/* Product image with zoom button */}
         <div className="relative w-full h-50 overflow-hidden group">
           <LazyImage
-            src={`${image}?width=700&quality=85&format=webp`}
+            src={`${image}?width=700&quality=90&format=webp`}
             alt={name}
             className="w-full h-full object-cover"
           />
