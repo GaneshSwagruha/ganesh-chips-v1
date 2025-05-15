@@ -381,7 +381,7 @@ const sweets = [
   },
 ];
 
-// Papads data
+// Papads dataa
 const papads = [
   {
     name: "Carrot Papad",
