@@ -430,7 +430,7 @@ const pickles = [
   {
     name: "Tomato Pickle",
     description: "Ripe tomatoes with village-style flavor.",
-    price: "₹12adasd5 / 250grms",
+    price: "₹125 / 250grms",
     image:
       "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/tomatoPickle.jpg",
   },
