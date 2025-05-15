@@ -18,7 +18,7 @@ const VisitSection: React.FC = () => {
           </h2>
           <p className="max-w-3xl mx-auto text-neutral-700">
             We make each order customised with care. To match your taste and
-            preference. Just the way you like iiit.{" "}
+            preference. Just the way you like it.{" "}
           </p>
         </motion.div>
 
