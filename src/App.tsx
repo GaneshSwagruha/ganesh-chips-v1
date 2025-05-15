@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ProductsPage = lazy(() => import("./pages/ProductsPage"));
@@ -28,7 +30,7 @@ function App() {
     <div className="font-body bg-cream min-h-screen flex flex-col">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-grow" style={{minHeight : "100vh"}}>
+      <main className="flex-grow" style={{ minHeight: "100vh" }}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -39,6 +41,8 @@ function App() {
         </Suspense>
       </main>
       <Footer />
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
