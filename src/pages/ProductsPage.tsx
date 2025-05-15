@@ -105,7 +105,6 @@ const traditionalSnacks = [
     price: "₹125 / 250grms",
     image:
       "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/sakinalu.jpg",
-    
   },
   {
     name: "Chegodi",
@@ -583,8 +582,8 @@ const ProductsPage: React.FC = () => {
               Ready to Experience Our Products?
             </h2>
             <p className="text-neutral-700 max-w-3xl mx-auto">
-              We specialize in offline purchases only. Visit our store or
-              contact us via WhatsApp for more information.
+              We make each order customised with care. To match your taste and
+              preference. Just the way you like it.
             </p>
           </div>
 

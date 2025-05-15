@@ -17,8 +17,9 @@ const VisitSection: React.FC = () => {
             Visit Our Store
           </h2>
           <p className="max-w-3xl mx-auto text-neutral-700">
-            We specialize in offline purchases only. Visit our store and experience the flavors of tradition!
-          </p>
+          We make each order customised with care.
+To match your taste and preference.
+Just the way you like it.          </p>
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

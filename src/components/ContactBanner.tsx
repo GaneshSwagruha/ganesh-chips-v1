@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ContactBanner: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-accent-600 to-accent-700 text-white" >
+    <section className="py-16 bg-gradient-to-r from-accent-600 to-accent-700 text-white">
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,8 @@ const ContactBanner: React.FC = () => {
             Want to Know More?
           </h2>
           <p className="max-w-3xl mx-auto text-lg mb-8">
-            We specialize in offline purchases only. Visit our store or get in touch with us via WhatsApp for more information.
+            We make each order customised with care. To match your taste and
+            preference. Just the way you like it.{" "}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
