@@ -196,7 +196,7 @@ const traditionalSnacks = [
   {
     name: "Nuvvulu Bellam",
     description: "Sesame-jaggery pockets",
-    price: "₹138 / 250grms",
+    price: "125 / 250grms",
     image:
       "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/nuvvuluBellam.jpg",
   },
