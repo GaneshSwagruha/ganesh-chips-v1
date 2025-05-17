@@ -461,6 +461,39 @@ const pickles = [
 const ProductsPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  const categories = [
+    {
+      id: "snacks",
+      label: "Snacks",
+      image:
+        "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/chips.jpg",
+    },
+    {
+      id: "traditional-snacks",
+      label: "Traditional Snacks",
+      image:
+        "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/sakinalu.jpg",
+    },
+    {
+      id: "sweets",
+      label: "Sweets",
+      image:
+        "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/bakshalu.jpg",
+    },
+    {
+      id: "papads",
+      label: "Papads",
+      image:
+        "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/carrotPapad.jpg",
+    },
+    {
+      id: "pickles",
+      label: "Pickles",
+      image:
+        "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/mangoPickle.jpg",
+    },
+  ];
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -499,38 +532,91 @@ const ProductsPage: React.FC = () => {
       </div>
 
       <div className="bg-white py-8">
+        <style>
+          {`
+          .circle-container {
+            width: 160px;
+            height: 160px;
+            position: relative;
+          }
+
+          .dotted-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 160px;
+            height: 160px;
+            transform-origin: center;
+            transition: transform 1s linear;
+            z-index: 1;
+          }
+
+          .group:hover .dotted-svg {
+            animation: spin 1s linear infinite;
+          }
+
+          @keyframes spin {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          .image-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 140px;
+            padding: 12px;
+            background-color: #edf2f7; /* light gray padding */
+            border-radius: 9999px;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 9999px;
+          }
+        `}
+        </style>
+
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="#snacks"
-              className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-4 rounded-full transition-colors"
-            >
-              Snacks
-            </a>
-            <a
-              href="#traditional-snacks"
-              className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-4 rounded-full transition-colors"
-            >
-              Traditional Snacks
-            </a>
-            <a
-              href="#sweets"
-              className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-4 rounded-full transition-colors"
-            >
-              Sweets
-            </a>
-            <a
-              href="#papads"
-              className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-4 rounded-full transition-colors"
-            >
-              Papads
-            </a>
-            <a
-              href="#pickles"
-              className="bg-[#FF7300] hover:bg-[#E56700] text-white font-medium py-2 px-4 rounded-full transition-colors"
-            >
-              Pickles
-            </a>
+          <div className="flex flex-wrap justify-center gap-8">
+            {categories.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="group flex flex-col items-center"
+              >
+                <div className="circle-container">
+                  {/* Dotted rotating circle using SVG */}
+                  <svg className="dotted-svg" viewBox="0 0 140 140">
+                    <circle
+                      cx="70"
+                      cy="70"
+                      r="65"
+                      fill="none"
+                      stroke="#a0aec0"
+                      strokeWidth="2"
+                      strokeDasharray="10 10"
+                    />
+                  </svg>
+
+                  <div className="image-wrapper">
+                    <img src={item.image} alt={item.label} />
+                  </div>
+                </div>
+                <p className="mt-3 text-center text-black font-medium text-sm max-w-[80px]">
+                  {item.label}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </div>
