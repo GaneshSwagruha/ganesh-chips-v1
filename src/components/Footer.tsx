@@ -117,6 +117,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-heading text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-3">
+
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 text-primary-300 mt-0.5" />
                 <a
@@ -128,15 +129,21 @@ const Footer: React.FC = () => {
                   +91 91332 22271
                 </a>
               </li>
+
+
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 text-primary-300 mt-0.5" />
                 <a
                   href="mailto:ganeshswagruhafoods@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-primary-100 hover:text-white transition-colors"
                 >
-                  ganeshswagruhafoods@gmail.com
+                  ganeshswagruhafood@gmail.com
                 </a>
               </li>
+
+
               <li className="flex items-start">
                 <Instagram className="h-5 w-5 mr-3 text-primary-300 mt-0.5" />
                 <a

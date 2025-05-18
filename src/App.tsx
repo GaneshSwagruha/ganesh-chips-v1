@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ProductsPage = lazy(() => import("./pages/ProductsPage"));
@@ -29,7 +29,35 @@ function App() {
   return (
     <div className="font-body bg-cream min-h-screen flex flex-col">
       <ScrollToTop />
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          backgroundColor: "#008888",
+          overflow: "hidden",
+          whiteSpace: "nowrap",
+          padding: "9px 0",
+          width: "100%",
+          zIndex: 60, // higher than navbar z-50
+        }}
+      >
+        <div
+          style={{
+            display: "inline-block",
+            color: "#ffebf0",
+            fontWeight: "bold",
+            fontSize: "16px",
+            paddingLeft: "100%", // start from right for animation
+            animation: "scroll-left 15s linear infinite",
+            whiteSpace: "nowrap",
+          }}
+        >
+          ✨ Online Ordering Coming Soon! Until then, place your orders on WhatsApp or Instagram 📱🛍️
+        </div>
+      </div>
       <Navbar />
+      
+
       <main className="flex-grow" style={{ minHeight: "100vh" }}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>

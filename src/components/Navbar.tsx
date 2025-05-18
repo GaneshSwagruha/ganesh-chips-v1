@@ -35,8 +35,8 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-lg py-2" : "bg-[#880000] py-4"
+      className={`sticky top-10 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-lg py-6" : "bg-[#880000] py-4"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
