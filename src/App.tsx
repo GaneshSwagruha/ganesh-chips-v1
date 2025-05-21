@@ -52,7 +52,7 @@ function App() {
             whiteSpace: "nowrap",
           }}
         >
-          ✨ Online Ordering Coming Soon! Until then, place your orders on WhatsApp or Instagram 📱🛍️
+          ✨ Online Ordering Coming Soon! Until then, place your orders on WhatsApp or Instagram 📱🛍️......
         </div>
       </div>
       <Navbar />
