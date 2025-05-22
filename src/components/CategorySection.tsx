@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
@@ -71,16 +71,16 @@ const CategorySection: React.FC<CategorySectionProps> = ({
               {/* Only insert this block after 3rd item and only on home page */}
               {showButton && index === 3 && (
                 <div className="block lg:hidden col-span-2">
-                <div className="flex justify-center mt-4">
-                  <Link
-                    to="/products"
-                    className="text-center bg-[#FF7300] hover:bg-[#e56700] text-white font-medium py-3 px-8 rounded-md transition-colors"
-                    onClick={() => window.scrollTo(0, 0)}
-                  >
-                    View More Products
-                  </Link>
+                  <div className="flex justify-center mt-4">
+                    <Link
+                      to="/products"
+                      className="text-center bg-[#FF7300] hover:bg-[#e56700] text-white font-medium py-3 px-8 rounded-md transition-colors"
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
+                      View More Products
+                    </Link>
+                  </div>
                 </div>
-              </div>
               )}
             </React.Fragment>
           ))}
