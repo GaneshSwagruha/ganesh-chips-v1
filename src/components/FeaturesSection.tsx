@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Award, Sparkles, Utensils } from 'lucide-react';
 
-import bannerImage from "../../public/pics/allSweetsBanner.jpg"
+import bannerImage from "../../public/pics/allSweetsBanner_02.png"
 
 const FeaturesSection: React.FC = () => {
   const features = [
