@@ -44,7 +44,7 @@ const FeaturesSection: React.FC = () => {
         {/* Image with fallback to gradient only */}
         <div className="absolute inset-0 bg-gradient-to-r from-amber-700 to-rose-800">
           <img 
-            src={bannerImage}
+            src= "https://zuedkxcivmpqpiplbyrj.supabase.co/storage/v1/object/public/fooditems/bakshalu.jpg"
             alt="Traditional Indian sweets"
             className="w-full h-full object-cover opacity-50"
             onError={(e) => {
