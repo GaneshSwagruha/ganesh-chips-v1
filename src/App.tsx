@@ -61,8 +61,8 @@ function App() {
       <main className="flex-grow" style={{ minHeight: "100vh" }}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
-{/*             <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage />} /> */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/products" element={<ProductsPage />} />
             <Route path="/visit" element={<VisitPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
