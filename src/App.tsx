@@ -25,7 +25,7 @@ const LoadingSpinner = () => (
   </div>
 );
 
-function app() {
+function App() {
   return (
     <div className="font-body bg-cream min-h-screen flex flex-col">
       <ScrollToTop />
@@ -61,10 +61,7 @@ function app() {
       <main className="flex-grow" style={{ minHeight: "100vh" }}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/visit" element={<VisitPage />} />
-            <Route path="/contact" element={<ContactPage />} />
+         
           </Routes>
         </Suspense>
       </main>
