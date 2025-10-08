@@ -25,7 +25,7 @@ const LoadingSpinner = () => (
   </div>
 );
 
-function App() {
+function app() {
   return (
     <div className="font-body bg-cream min-h-screen flex flex-col">
       <ScrollToTop />
