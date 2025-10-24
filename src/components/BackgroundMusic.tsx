@@ -64,9 +64,20 @@ const BackgroundMusic: React.FC = () => {
         <source src="/music/ganeshChips.mp3" type="audio/mpeg" />
       </audio>
 
+      {/* Scroll to top button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-6 right-6 bg-[#880000] hover:bg-[#660000] text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+        title="Scroll to top"
+      >
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L10 4.414 4.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+        </svg>
+      </button>
+
       {/* Music control button */}
       {isLoaded && (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-20 right-6 z-50">
           <button
             onClick={toggleMusic}
             className={`bg-[#880000] hover:bg-[#660000] text-white p-3 rounded-full shadow-lg transition-all duration-300 ${
