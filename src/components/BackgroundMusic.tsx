@@ -3,9 +3,20 @@ import React, { useState, useRef, useEffect } from 'react';
 const BackgroundMusic: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
+  const [userInteracted, setUserInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
+    // Detect iOS device
+    const checkIOS = () => {
+      const userAgent = navigator.userAgent;
+      const isIOSDevice = /iPad|iPhone|iPod/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      setIsIOS(isIOSDevice);
+    };
+    
+    checkIOS();
+
     // Add CSS for music button animations
     const style = document.createElement('style');
     style.textContent = `
@@ -20,23 +31,54 @@ const BackgroundMusic: React.FC = () => {
     `;
     document.head.appendChild(style);
 
+    // Track first user interaction for iOS
+    const handleFirstInteraction = () => {
+      setUserInteracted(true);
+      document.removeEventListener('touchstart', handleFirstInteraction);
+      document.removeEventListener('click', handleFirstInteraction);
+    };
+
+    document.addEventListener('touchstart', handleFirstInteraction, { passive: true });
+    document.addEventListener('click', handleFirstInteraction);
+
     return () => {
-      document.head.removeChild(style);
+      document.removeEventListener('touchstart', handleFirstInteraction);
+      document.removeEventListener('click', handleFirstInteraction);
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
     };
   }, []);
 
 
 
-  const toggleMusic = () => {
+  const toggleMusic = async () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
         setIsPlaying(false);
       } else {
-        audioRef.current.play().catch(e => {
+        // iOS-specific handling
+        if (isIOS && !userInteracted) {
+          alert('Please tap anywhere on the page first, then try the music button again.');
+          return;
+        }
+        
+        try {
+          // For iOS, reload audio and set volume
+          if (isIOS) {
+            audioRef.current.load();
+            audioRef.current.volume = 0.3;
+          }
+          
+          await audioRef.current.play();
+          setIsPlaying(true);
+        } catch (e) {
           console.log('Audio play failed:', e);
-        });
-        setIsPlaying(true);
+          if (isIOS) {
+            alert('Audio couldn\'t start on iOS. Please check your device is not on silent mode and try again.');
+          }
+        }
       }
     }
   };
@@ -56,10 +98,11 @@ const BackgroundMusic: React.FC = () => {
       <audio
         ref={audioRef}
         loop
-        preload="auto"
+        preload={isIOS ? "metadata" : "auto"}
         onCanPlayThrough={handleAudioLoad}
         onError={handleAudioError}
         className="hidden"
+        playsInline
       >
         <source src="/music/ganeshChips.mp3" type="audio/mpeg" />
       </audio>
